@@ -1,0 +1,63 @@
+<div class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 flex flex-col justify-center py-12 px-4">
+  <div class="max-w-md w-full mx-auto">
+    <div class="flex flex-col items-center mb-10">
+      <img src="/assets/logo-getjobs.png" alt="GetJobs" class="h-12 mb-6 drop-shadow" />
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 text-center tracking-tight">
+        Entrar na sua conta
+      </h1>
+      <p class="text-gray-500 text-center max-w-xs text-lg">
+        Bem-vindo de volta! Acesse sua conta para encontrar ou anunciar vagas.
+      </p>
+    </div>
+    <!-- User type selection -->
+    <div class="flex justify-center gap-4 mb-8">
+      <button
+        class="flex-1 px-6 py-3 rounded-xl border-2 font-semibold text-lg shadow transition focus:outline-none focus:ring-2 focus:ring-[#CC2632]"
+        [ngClass]="{
+          'bg-[#CC2632] text-white border-[#CC2632] hover:bg-[#a81d28]': selectedRole === 'jobseeker',
+          'bg-white text-gray-700 border-gray-200 hover:border-[#CC2632] hover:text-[#CC2632]': selectedRole !== 'jobseeker'
+        }" type="button" (click)="selectRole('jobseeker')">
+        Sou Candidato
+      </button>
+      <button
+        class="flex-1 px-6 py-3 rounded-xl border-2 font-semibold text-lg shadow transition focus:outline-none focus:ring-2 focus:ring-[#CC2632]"
+        [ngClass]="{
+          'bg-[#CC2632] text-white border-[#CC2632] hover:bg-[#a81d28]': selectedRole === 'employer',
+          'bg-white text-gray-700 border-gray-200 hover:border-[#CC2632] hover:text-[#CC2632]': selectedRole !== 'employer'
+        }" type="button" (click)="selectRole('employer')">
+        Sou Empresa
+      </button>
+    </div>
+    <form class="bg-white/90 backdrop-blur rounded-3xl shadow-xl border border-gray-100 px-10 py-12"
+      (ngSubmit)="onSubmit()" autocomplete="on">
+      <div class="mb-7">
+        <label for="email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" required
+          class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CC2632] text-gray-900 bg-gray-50 transition"
+          placeholder="seu@email.com" />
+      </div>
+      <div class="mb-7">
+        <label for="password" class="block text-gray-700 font-semibold mb-2">Senha</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required
+          class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CC2632] text-gray-900 bg-gray-50 transition"
+          placeholder="Sua senha" />
+      </div>
+      <div class="flex items-center justify-between mb-8">
+        <label class="flex items-center text-gray-600 text-sm select-none cursor-pointer">
+          <input type="checkbox" class="form-checkbox rounded text-[#CC2632] mr-2 accent-[#CC2632]" name="rememberMe" />
+          Lembrar-me
+        </label>
+        <a href="#" class="text-[#CC2632] text-sm hover:underline font-medium">Esqueceu a senha?</a>
+      </div>
+      <button type="submit"
+        class="w-full bg-[#CC2632] hover:bg-[#a81d28] text-white font-bold py-3 rounded-xl transition text-lg shadow-lg tracking-wide">
+        Entrar
+      </button>
+    </form>
+    <div class="text-center mt-8">
+      <span class="text-gray-500 text-base">Não tem uma conta?
+        <a routerLink="/signup" class="text-[#CC2632] hover:underline font-semibold">Cadastre-se</a>
+      </span>
+    </div>
+  </div>
+</div>

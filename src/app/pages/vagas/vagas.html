@@ -1,0 +1,125 @@
+<div class="home max-w-screen-2xl mx-auto px-4">
+  <app-navbar></app-navbar>
+
+  <!-- Header -->
+  <div class="max-w-screen-2xl mx-auto px-6 mt-8 mb-4">
+    <h2 class="text-center text-lg font-semibold text-gray-700 mb-1">Explore oportunidades em Moçambique</h2>
+    <p class="text-center text-gray-500 mb-6">Encontre as melhores vagas em empresas de todo o país</p>
+    <form class="flex justify-center mb-6">
+      <div class="relative w-full max-w-2xl">
+        <input type="text" placeholder="Buscar por título, empresa, etc"
+          class="w-full py-3 pl-12 pr-36 rounded-lg border border-gray-200 focus:ring-2 focus:ring-[#CC2632] focus:outline-none text-gray-700 bg-gray-50 shadow-sm transition" />
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+          stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" />
+          <path d="M21 21l-4.35-4.35" stroke-linecap="round" />
+        </svg>
+        <button type="submit"
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-[#CC2632] text-white font-semibold px-8 py-2 rounded-lg hover:bg-[#a81d28] transition">
+          pesquisar
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-screen-2xl mx-auto px-6 flex flex-col lg:flex-row gap-8">
+    <!-- Sidebar Filters -->
+    <aside class="w-full lg:w-72 flex-shrink-0 mb-8 lg:mb-0">
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm sticky top-8">
+        <div class="mb-6">
+          <h4 class="font-bold text-gray-700 mb-2">Tipo de contratação</h4>
+          <ul class="space-y-2 text-sm">
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Tempo inteiro
+                <span class="ml-auto text-xs bg-gray-100 rounded px-2 py-0.5 text-gray-500">652</span></label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Temporário <span
+                  class="ml-auto text-xs bg-gray-100 rounded px-2 py-0.5 text-gray-500">120</span></label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Estágio <span
+                  class="ml-auto text-xs bg-gray-100 rounded px-2 py-0.5 text-gray-500">45</span></label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Freelancer <span
+                  class="ml-auto text-xs bg-gray-100 rounded px-2 py-0.5 text-gray-500">17</span></label></li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h4 class="font-bold text-gray-700 mb-2">Modelo de trabalho</h4>
+          <ul class="space-y-2 text-sm">
+            <li><label class="flex items-center gap-2"><input type="checkbox"
+                  class="accent-[#CC2632]">Presencial</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Remoto</label>
+            </li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Híbrido</label>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h4 class="font-bold text-gray-700 mb-2">Categoria</h4>
+          <select class="w-full border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 text-gray-700">
+            <option>Todas categorias</option>
+          </select>
+        </div>
+        <div class="mb-6">
+          <h4 class="font-bold text-gray-700 mb-2">Salário</h4>
+          <div class="flex gap-2">
+            <input type="number" placeholder="Mínimo"
+              class="w-1/2 border border-gray-200 rounded-lg px-2 py-1 bg-gray-50 text-gray-700" />
+            <input type="number" placeholder="Máximo"
+              class="w-1/2 border border-gray-200 rounded-lg px-2 py-1 bg-gray-50 text-gray-700" />
+          </div>
+        </div>
+        <div class="mb-6">
+          <h4 class="font-bold text-gray-700 mb-2">Experiência</h4>
+          <ul class="space-y-2 text-sm">
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Júnior</label>
+            </li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Pleno</label>
+            </li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Sênior</label>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h4 class="font-bold text-gray-700 mb-2">Data de publicação</h4>
+          <ul class="space-y-2 text-sm">
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Hoje</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Esta
+                semana</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="accent-[#CC2632]">Este mês</label>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-700 mb-2">Província</h4>
+          <select class="w-full border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 text-gray-700">
+            <option>todas províncias</option>
+          </select>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Job List & Details -->
+    <main class="flex-1 flex flex-col lg:flex-row gap-8">
+      <!-- Job List -->
+      <section class="flex-1">
+        <div class="text-xs text-gray-500 mb-2">mostrando 0-9 de 45</div>
+        <div class="flex flex-col gap-4">
+          <!-- Job Card Example (repeat with *ngFor) -->
+          <app-vacancy></app-vacancy>
+          <app-vacancy></app-vacancy>
+          <app-vacancy></app-vacancy>
+          <app-vacancy></app-vacancy>
+          <!-- Repeat Job Card End -->
+        </div>
+      </section>
+
+      <!-- Job Details -->
+      <!-- <aside class="w-full lg:w-[480px] flex-shrink-0" aria-label="Detalhes da vaga"> -->
+      <aside class="flex-1" aria-label="Detalhes da vaga">
+        <section class="flex-1">
+          <div class="flex flex-col gap-4">
+            <app-vacancy-details></app-vacancy-details>
+          </div>
+        </section>
+      </aside>
+    </main>
+  </div>
+</div>
